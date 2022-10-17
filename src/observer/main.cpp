@@ -149,7 +149,7 @@ void quit_signal_handle(int signum)
 int main(int argc, char **argv)
 {
   setSignalHandler(quit_signal_handle);
-
+  // parse the command line parameter
   parse_parameter(argc, argv);
 
   int rc = STATUS_SUCCESS;
