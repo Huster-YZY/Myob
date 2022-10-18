@@ -1,2 +1,0 @@
-1.使用python脚本进行测试。
-2.直接提交可以通过basic和meta data.
