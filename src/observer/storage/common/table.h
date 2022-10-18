@@ -44,7 +44,7 @@ public:
    * @param attributes 字段
    */
   RC create(const char *path, const char *name, const char *base_dir, int attribute_count, const AttrInfo attributes[]);
-
+  RC drop(const char *path, const char *name, const char *base_dir);
   /**
    * 打开一个表
    * @param meta_file 保存表元数据的文件完整路径
@@ -111,7 +111,7 @@ public:
 private:
   std::string base_dir_;
   TableMeta table_meta_;
-  DiskBufferPool *data_buffer_pool_ = nullptr;  /// 数据文件关联的buffer pool
+  DiskBufferPool *data_buffer_pool_ = nullptr;   /// 数据文件关联的buffer pool
   RecordFileHandler *record_handler_ = nullptr;  /// 记录操作
   std::vector<Index *> indexes_;
 };
